@@ -104,6 +104,7 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
+      <column caption='Total Students' datatype='integer' name='[Total]' role='measure' type='quantitative' />
       <layout dim-ordering='alphabetic' dim-percentage='0.444834' measure-ordering='alphabetic' measure-percentage='0.555166' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
@@ -112,6 +113,13 @@
   </datasources>
   <worksheets>
     <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Foreign Students in India, by Department</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -121,7 +129,7 @@
             <column datatype='string' name='[Discipline]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Females]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Males]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+            <column caption='Total Students' datatype='integer' name='[Total]' role='measure' type='quantitative' />
             <column-instance column='[Discipline]' derivation='None' name='[none:Discipline:nk]' pivot='key' type='nominal' />
             <column-instance column='[Females]' derivation='Sum' name='[sum:Females:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Males]' derivation='Sum' name='[sum:Males:qk]' pivot='key' type='quantitative' />
